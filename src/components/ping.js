@@ -6,6 +6,7 @@ const Ping = () => {
     fullName: '',
     email: '',
     dob: '',
+    occupation: '',
   })
   const [data, setData] = useState([])
 
@@ -55,6 +56,16 @@ const Ping = () => {
         />
         <br />
         <br />
+        <input
+          id="fullname"
+          className="input"
+          name="occupation"
+          value={form.occupation} // Use the correct state variable
+          onChange={handleChange}
+          placeholder="Your Job"
+        />
+        <br />
+        <br />
         <button
           type="submit"
           className="input"
@@ -71,6 +82,7 @@ const Ping = () => {
                 <th>FULL NAME</th>
                 <th>EMAIL ACOUNT</th>
                 <th>DATE OF BIRTH</th>
+                <th>OCCUPATION</th>
               </tr>
             </thead>
             <tbody>
@@ -79,6 +91,7 @@ const Ping = () => {
                   <td>{item.fullName}</td>
                   <td>{item.email}</td>
                   <td>{item.dob}</td>
+                  <td>{item.occupation}</td>
                 </tr>
               ))}
             </tbody>
