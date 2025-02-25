@@ -1,6 +1,14 @@
 import React, { useState } from 'react'
 import '../App.css'
-import { Column, Grid } from '@carbon/react'
+import {
+  Column,
+  Grid,
+  Header,
+  HeaderGlobalAction,
+  HeaderGlobalBar,
+  HeaderName,
+} from '@carbon/react'
+import { ImageSearch } from '@carbon/icons-react'
 
 const Ping = () => {
   const [form, setForm] = useState({
@@ -23,6 +31,19 @@ const Ping = () => {
   }
 
   return (
+    <>
+      <Grid>
+        <Column lg={16} md={8} sm={4}>
+          <Header className="header">
+            <HeaderName>This A demo testing git</HeaderName>
+            <HeaderGlobalBar>
+              <HeaderGlobalAction>
+                <ImageSearch size={20} />
+              </HeaderGlobalAction>
+            </HeaderGlobalBar>
+          </Header>
+        </Column>
+      </Grid>
     <Grid>
       <Column lg={16} md={8} sm={4}>
         <Grid>
@@ -110,6 +131,7 @@ const Ping = () => {
         </Grid>
       </Column>
     </Grid>
+      </>
   )
 }
 
