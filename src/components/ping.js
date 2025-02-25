@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import '../App.css'
+import { Column, Grid } from '@carbon/react'
 
 const Ping = () => {
   const [form, setForm] = useState({
@@ -22,7 +23,10 @@ const Ping = () => {
   }
 
   return (
-    <div>
+    <Grid>
+      <Column lg={16} md={8} sm={4}>
+        <Grid>
+          <Column lg={8} md={4} sm={4}>
       <form id="form" className="form" onSubmit={handleSubmit}>
         <input
           id="fullname"
@@ -74,6 +78,10 @@ const Ping = () => {
           Submit
         </button>
       </form>
+            </Column>
+        </Grid>
+        <Grid>
+          <Column lg={8} md={4} sm={4}>
       <center>
         <div className="table">
           <table>
@@ -98,7 +106,10 @@ const Ping = () => {
           </table>
         </div>
       </center>
-    </div>
+          </Column>
+        </Grid>
+      </Column>
+    </Grid>
   )
 }
 
